@@ -230,3 +230,72 @@ footer{
 .icons.inst:hover {
     content: url(/img/main-page/instagram-after.png);
 }
+
+/*Адаптація*/
+@media (max-width: 768px) {
+  /* Зміни для мобільних пристроїв */
+  .main.rectangle, .rectangle, .feedback.rectangle{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  .header-link{
+    font-size: 24px;
+    margin: 0 auto;
+    padding: auto;
+}
+.dog-img, .player-img, .main-info.info{
+    display: none;
+}
+.main-info{
+    position: absolute;
+    top: 600px; 
+    left: 0; 
+    right: 0;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 400;
+    -webkit-text-stroke: 2px #0C652580;
+}
+.main.rectangle{
+    margin-top: 98px;
+    height: 584px;
+}
+h2{
+    font-size: auto;
+}
+.image-container{
+    display: flex;
+    justify-content: center;
+}
+.dl-screen, .dl-clouds{
+    margin: 0;
+    width: 328px;
+    height: auto;
+}
+.dl-clouds, .dl-name, .dl-btn{
+    left: 54%;
+    transform: translateX(-50%);
+}
+.dl-btn{
+    top: 130px;
+    width: 76px;
+}
+.dl-name{
+    top: 80px;
+    width: 202px;
+}
+.email-rectangle, .text-rectangle{
+    width: auto;
+}
+button{
+    width: auto;
+}
+.feedback.rectangle{
+    height: auto;
+}
+.footer-info p{
+    display: none;
+}
+}
