@@ -1,0 +1,229 @@
+body{
+    background-image: url('../img/bg/main-page.webp');
+    background-size: cover; /* Змінює розмір зображення так, щоб воно повністю вкладалося у фон */
+    background-position: top; /* Вирівнює зображення */
+    background-repeat: no-repeat; /* Запобігає повторенню зображення */
+    font-family: "Irish Grover", sans-serif;
+    font-style: normal;
+}
+
+/*Navigation */
+.rectangle {
+    width: 1280px;
+    height: 60px;
+    margin: 0 auto;
+    border-width: 5px;
+    border-color: #FEF1CF80;/*50%*/
+    border-style: solid;
+    background-color: #9CC1A680;/*50%*/
+}
+
+.navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation li{
+    text-align: center;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.header-link{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 32px;
+    margin: 0 81px 0 81px;
+
+    border-style: solid;
+    border-color: #FFFFFF00;
+    padding: 0 10px 0 10px;
+    border-radius: 8px;
+    border-width: 1px;
+}
+
+.header-link:hover{
+    border-color: #FFFFFF;
+}
+.header-link:active{
+    color: #0C652580;
+    background-color: #FFFFFF80;
+    -webkit-text-stroke: 0.4px #FFFFFF;
+}
+
+
+
+/*Main content */
+/*Info */
+.main.rectangle{
+    margin-top: 98px;
+    height: 300px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);/*тень*/
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.3s ease-in-out; /* Анимация перехода при изменении transform */
+    backdrop-filter: blur(2px); /* Значення 10px можна змінити */
+    z-index: 1; /* Розміщує блюр поверх фонового зображення */
+}
+.main.rectangle:hover{
+    transform: scale(1.02)
+}
+.main.video{
+    height: auto;
+}
+.project-info{
+    display: flex;
+    flex-direction: column;
+}
+.project-name{
+    box-shadow: 0 0 40px 2px #0C652580;
+    align-items: left;
+    padding: 4px 8px 4px 8px;
+    margin: 20px 20px 0 20px;
+    color:#FFFFFF;
+    font-size: 40px;
+    border-width: 4px;
+    border-color: #FFFFFF;
+    border-style: solid;
+}
+.main-info {
+    margin: 20px 0 0 20px;
+    color:#FFFFFF;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 400;
+    -webkit-text-stroke: 0.8px #0C652580;
+}
+
+
+button{
+    margin: auto 20px 20px auto;
+    border-width: 2px;
+    border-color: #9CC1A6;
+    color: #0C652580;
+    border-style: solid;
+    border-radius: 16px;
+    width: 162px;
+    height: 60px;
+    cursor: pointer;    
+}
+button a{
+    text-decoration: none; 
+    font-family: "Irish Grover", sans-serif;
+    font-style: normal;
+    font-size: 32px;
+    margin: 0 auto;
+    color: inherit;
+}
+button:hover{
+    -webkit-text-stroke: 0.4px #FFFFFF;
+    background-color: #FFFFFF80;
+}
+button:active{
+    color: #FFFFFF;
+    background-color: #9CC1A6;
+    -webkit-text-stroke: 0;
+}
+
+
+
+/*Footer*/
+footer{
+    height: 40px;
+    margin-top: 28px;
+    background-color: #6B555C80;/*50%*/
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.footer-info{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+.footer-info p{
+    margin: 3px 40px 0 40px;
+    font-size: 20px;
+}
+
+.icons{
+    margin: 3px 40px 0 40px;
+    cursor: pointer;
+}
+
+
+/*Адаптація*/
+@media (max-width: 768px) {
+  /* Зміни для мобільних пристроїв */
+  .main.rectangle, .rectangle, .feedback.rectangle{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  .header-link{
+    font-size: 24px;
+    margin: 0 auto;
+    padding: auto;
+}
+.dog-img, .player-img, .main-info.info{
+    display: none;
+}
+.main-info{
+    position: absolute;
+    top: 600px; 
+    left: 0; 
+    right: 0;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 400;
+    -webkit-text-stroke: 2px #0C652580;
+}
+.main.rectangle{
+    margin-top: 98px;
+    height: 584px;
+}
+h2{
+    font-size: auto;
+}
+.image-container{
+    display: flex;
+    justify-content: center;
+}
+.dl-screen, .dl-clouds{
+    margin: 0;
+    width: 328px;
+    height: auto;
+}
+.dl-clouds, .dl-name, .dl-btn{
+    left: 54%;
+    transform: translateX(-50%);
+}
+.dl-btn{
+    top: 130px;
+    width: 76px;
+}
+.dl-name{
+    top: 80px;
+    width: 202px;
+}
+.email-rectangle, .text-rectangle{
+    width: auto;
+}
+button{
+    width: auto;
+}
+.feedback.rectangle{
+    height: auto;
+}
+.footer-info p{
+    display: none;
+}
+}
